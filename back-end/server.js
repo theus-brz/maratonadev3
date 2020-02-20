@@ -25,9 +25,6 @@ nunjucks.configure('../front-end/', {
   noCache: true,
 });
 
-/* Lista de doadores: Vetor ou Array */
-const donors = require('./entities/donors');
-
 /* Configurar apresentação da página */
 server.get('/', function(_, res) {
   db.query("SELECT * FROM donors", function(err, result) {
